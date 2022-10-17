@@ -1,0 +1,41 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.LockDisplay{
+    display: flex;
+    background-image: linear-gradient(180deg, #20BBFF 0%, #0E85FF 100%);
+    border-radius: 15px;
+}
+
+.lockBox {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 334px;
+    border-right: 1px solid var(--color4);
+    
+}
+
+.lockImage{
+    padding-left: 81px;
+    padding-right: 81px;
+    padding-top: 94px;
+    padding-bottom: 30px;
+}
+
+.lockBoxText {
+    color: var(--color2);
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    text-align: center;
+    padding-bottom: 99px;
+}

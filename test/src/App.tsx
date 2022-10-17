@@ -1,11 +1,12 @@
-import React from 'react';
-import Lock from './Components/lock/lock';
+import Lock from './Components/login/lock/lock';
 import "./style.css"
+import SignUp from './Components/signUp/signUp';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Lock />
+      {/* <SignUp /> */}
       
     </div>
   );
