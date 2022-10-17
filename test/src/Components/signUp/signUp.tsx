@@ -1,6 +1,14 @@
 import './signUp.css'
+import {useState} from 'react'
 
 const SignUp = () => {
+
+    const [togglePass, setTogglePass] = useState(false)
+
+    const togglePassword = () => {
+        setTogglePass(!togglePass)
+    }
+
   return (
     <div>
         <div className='lockContainer'>
@@ -22,7 +30,7 @@ const SignUp = () => {
                     <div className="mPin">
                         
                             <input type="password" name="mPin" id="mPin" className="input" placeholder="Re-Enter 4 Digit MPin" />
-                            {/* <img src={require("../../assets/eye_on.png")} alt="eye" className='toggleEye' /> */}
+                            <img src={require("../../assets/eye_on.png")} alt="eye" className='toggleEye' onClick={togglePassword} />
                     </div>
                     <div className='bottomDisplay'> 
                         <div className="button">

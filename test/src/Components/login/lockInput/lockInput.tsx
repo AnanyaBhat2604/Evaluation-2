@@ -1,9 +1,19 @@
-// import './lockInput.css'
+import './lockInput.css'
 import { Link } from "react-router-dom"
+import Toast from "../../toast/toast"
+import { useState } from 'react'
 
 const LockInput = () => {
+
+    const [togglePass, setTogglePass] = useState(false)
+
+    const togglePassword = () => {
+        setTogglePass(!togglePass)
+    }
+
     return (
         <div className='lockContainer'>
+
             <div className="form">
                 <div className="signIn">
                     SIGN IN TO YOUR ACCOUNT
@@ -15,8 +25,10 @@ const LockInput = () => {
                         </label>
                     </div>
                     <div className="mPin">
-                        <input type="password" name="mPin" id="mPin" className="input" placeholder="MPin" />
-                        <img src={require("../../../assets/eye_on.png")} alt="eye" className='toggleEye' />
+                        <input type={togglePass ? 'text' : 'password'} name="mPin" id="mPin" className="input" placeholder="MPin" minLength={4}
+
+                            maxLength={4} />
+                        <img src={require("../../../assets/eye_on.png")} alt="eye" className='toggleEye' onClick={togglePassword} />
                     </div>
                     <div className='bottomDisplay'>
                         <div className="ForgotPassword">
@@ -25,7 +37,7 @@ const LockInput = () => {
                         <div className="button">
                             <input type="submit" value="SIGN IN" className='signInText' />
                         </div>
-                        <div className="reg">Don't have a Account? <Link to="/signUp">SIGN UP</Link></div>
+                        <div className="reg">Don't have a Account? <Link to="/signUp" className="link">SIGN UP</Link></div>
                     </div>
 
                 </form>

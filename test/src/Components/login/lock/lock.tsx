@@ -6,6 +6,7 @@ import './../lockInput/lockInput.css'
 import "../../signUp/signUp.css"
 
 import { Routes, Route, Link } from "react-router-dom"
+import Toast from "../../toast/toast"
 
 const Lock = () => {
 

@@ -1,0 +1,8 @@
+.success {
+    box-sizing: border-box;
+    height: 44px;
+    width: 513px;
+    border: 1px solid var(success);
+    border-radius: 2px;
+    background-color: #CBF3DC;
+}
