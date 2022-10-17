@@ -4,7 +4,7 @@ import SignUp from './Components/signUp/signUp';
 import Toast from './Components/toast/toast';
 import LandingPage from './Views/landingPage/landingPage';
 import LockInput from './Components/login/lockInput/lockInput';
-import './Components/login/lockInput/lockInput.css';
+import { Routes, Route, Link } from "react-router-dom"
 
 function App() {
   return (

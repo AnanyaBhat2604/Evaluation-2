@@ -17,10 +17,12 @@ const Lock = () => {
         <h4 className='lockBoxText'>Protect & Manage every password in your business</h4>
       </div>
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<LockInput />} />
         <Route path="/signUp" element={<SignUp />} />
-      </Routes>
+      </Routes> */}
+
+      <LockInput />
 
     </div>
   )
