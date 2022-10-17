@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+    background-color: var(--color5);
+    font-family: 'Open Sans';
+}
+
+:root {
+    --color1: #0E85FF;
+    --color2: #FFFFFF;
+    --color3: #787E8C;
+}

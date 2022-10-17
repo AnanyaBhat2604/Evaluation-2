@@ -1,0 +1,31 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.lockBox {
+    background: linear-gradient(180deg, #20BBFF 0%, #0E85FF 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 334px;
+    border-radius: 15px;
+}
+
+.lockImage{
+    padding-left: 81px;
+    padding-right: 81px;
+    padding-top: 94px;
+    padding-bottom: 30px;
+}
+
+.lockBoxText {
+    color: var(--color2);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 27px;
+    text-align: center;
+    padding-bottom: 99px;
+}
