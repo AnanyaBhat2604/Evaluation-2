@@ -1,0 +1,81 @@
+.bodyHome {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.homeContainer {
+    padding: 3em 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTitle {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 41px;
+    border-bottom: 3px solid var(--active);
+    border-radius: 2px;
+    color: var(--color6);
+    width: 32px;
+    padding-top: 20px;
+}
+
+.headerComponents {
+    display: flex;
+    gap: 38px;
+}
+
+.headerSearch {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchbarIcon {
+    right: 0;
+}
+
+.searchbar {
+    outline: none;
+    border-bottom: 1px solid var(--color1);
+    border-width: 0 0 1px 0;
+    background: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.homeBodyContents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homeBodyText {
+    border-radius: 500px;
+    background-color: #f5f7fb;
+    width: 819px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 300px;
+}
+
+.homeBodyText div {
+    color: var(--color6);
+    font-size: 26px;
+    letter-spacing: 0;
+    line-height: 36px;
+    text-align: center;
+    padding: 3em 0;
+    max-width: 370px;
+}

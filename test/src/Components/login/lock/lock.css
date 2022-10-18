@@ -2,29 +2,29 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
+
+}
+
+.LockDisplay {
     display: flex;
-    flex-direction: column;
+    background-image: linear-gradient(180deg, #20BBFF 0%, #0E85FF 100%);
+    border-radius: 15px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.LockDisplay{
-    display: flex;
-    background-image: linear-gradient(180deg, #20BBFF 0%, #0E85FF 100%);
-    border-radius: 15px;
-}
-
 .lockBox {
-   
+
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 334px;
     border-right: 1px solid var(--color4);
-    
+
 }
 
-.lockImage{
+.lockImage {
     padding-left: 81px;
     padding-right: 81px;
     padding-top: 94px;
@@ -41,12 +41,7 @@ body {
 }
 
 @media only screen and (max-width: 845px) {
-    .LockDisplay {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .lockBox{
+    .lockBox {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -55,7 +50,7 @@ body {
         border-bottom: 1px solid var(--color4);
     }
 
-    .lockImage{
+    .lockImage {
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 20px;
@@ -68,4 +63,12 @@ body {
         text-align: center;
         justify-content: center;
     }
+}
+
+.lockParent {
+    /* margin: 0 12%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }

@@ -11,6 +11,7 @@ import Toast from "../../toast/toast"
 const Lock = () => {
 
   return (
+    <div className="lockParent">
     <div className="LockDisplay">
       <div className='lockBox'>
         <div className="lockImage"><img src={require("../../../assets/logo.png")} /></div>
@@ -24,6 +25,7 @@ const Lock = () => {
 
       <LockInput />
 
+    </div>
     </div>
   )
 }

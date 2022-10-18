@@ -21,9 +21,10 @@
     line-height: 27px;
 }
 
-.mobile{
+.mobile {
     padding-bottom: 19px;
 }
+
 .mPin {
     position: relative !important;
 }
@@ -33,6 +34,7 @@
     top: 15px;
     right: 16px;
 }
+
 .input {
     box-sizing: border-box;
     height: 54px;
@@ -79,5 +81,18 @@
 }
 
 @media only screen and (max-width: 845px) {
-    
+    .LockDisplay {
+        min-height: 100vh;
+    }
+
+    .form {
+        padding: 0;
+    }
+
+    .LockDisplay {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

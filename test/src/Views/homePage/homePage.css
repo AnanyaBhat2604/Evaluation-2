@@ -1,9 +1,9 @@
-body {
-    background-size: cover;
-    background-repeat: no-repeat;
+.home {
+    position: relative;
+    margin: var(--bodyMargin);
     min-height: 100vh;
-    background-image: var(--color5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+.bodyHome{
+    width: 100%;
 }

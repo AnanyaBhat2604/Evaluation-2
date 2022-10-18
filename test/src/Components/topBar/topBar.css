@@ -1,0 +1,23 @@
+.topBar {
+    position: absolute;
+    margin-left: 8rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 8rem;
+    background-color: var(--topBar);
+}
+
+.topBarContents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.topBarIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

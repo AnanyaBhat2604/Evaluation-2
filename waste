@@ -27,3 +27,18 @@
         justify-content: center;
     }
 } */
+
+
+
+<div className="homeHeader">
+        <div className="headerTitle">Sites</div>
+        <div className="headerOptions">
+          <div className="headerSearch">
+            <input type="text" className="searchbar" placeholder="Search" />
+            <img src={require('../../assets/Images/search.png')} alt="search" className="searchIcon" />
+          </div>
+          <div className="headerAddButton">
+            <img src={require('../../assets/Images/add_btn.png')} alt="add" />
+          </div>
+        </div>
+      </div>
