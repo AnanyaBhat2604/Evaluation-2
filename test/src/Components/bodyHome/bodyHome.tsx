@@ -63,6 +63,13 @@ const BodyHome = () => {
                         </div>
                     </div>
                 </div>
+                <div className="socialMedia">
+                    <div className="socialMediaTitle">Social Media</div>
+                    <div className="socialMediaCount">07</div>
+                    <div className="socialMediaDropDown">
+                        <img src={require('../../assets/Images/Path Copy.png')} alt="add" />
+                    </div>
+                </div>
             </div>
             <div className="homeBodyContainerBox">
                 <div className="homeBodyContents">
@@ -70,50 +77,45 @@ const BodyHome = () => {
                         <div className="homeBodyText">
                             <div>Please Click on the “+” symbol to add sites</div>
                         </div>) : (
-                        <div className="socialMedia">
-                            <div className="socialMediaTitle">Social Media</div>
-                            <div className="socialMediaCount">07</div>
-                            <div className="socialMediaDropDown">
-                                <img src={require('../../assets/Images/Path Copy.png')} alt="add" />
-                            </div>
-                            <div className="cardContainer">
-                                {previousData.map((ele: any) => {
-                                    return (
-                                        <div key={ele.siteName} className="cardContents">
-                                            <div className="cardUpper">
-                                                <div className="cardLogo">
-                                                    {' '}
-                                                    {ele.icon !== '' ? (
-                                                        <img src={ele.icon} alt="" />
-                                                    ) : (
-                                                        <img
-                                                            src={require('../../assets/logo.png')}
-                                                            height="50px"
-                                                            style={{
-                                                                backgroundPosition: 'cover',
-                                                                borderRadius: '50%',
-                                                            }}
-                                                        />
-                                                    )}
-                                                </div>
 
-                                                <div className="cardCopyTitle">
-                                                    <div className="cardTitle"> {ele.siteName}</div>
-                                                    <div className="cardCopy">
-                                                        <img
-                                                            src={require('../../assets/Images/copy.png')}
-                                                            alt="copy"
-                                                        />
-                                                        <div>Copy Password</div>
-                                                    </div>
+                        <div className="cardContainer">
+                            {previousData.map((ele: any) => {
+                                return (
+                                    <div key={ele.siteName} className="cardContents">
+                                        <div className="cardUpper">
+                                            <div className="cardLogo">
+                                                {' '}
+                                                {ele.icon !== '' ? (
+                                                    <img src={ele.icon} alt="" />
+                                                ) : (
+                                                    <img
+                                                        src={require('../../assets/logo.png')}
+                                                        height="50px"
+                                                        style={{
+                                                            backgroundPosition: 'cover',
+                                                            borderRadius: '50%',
+                                                        }}
+                                                    />
+                                                )}
+                                            </div>
+
+                                            <div className="cardCopyTitle">
+                                                <div className="cardTitle"> {ele.siteName}</div>
+                                                <div className="cardCopy">
+                                                    <img
+                                                        src={require('../../assets/Images/copy.png')}
+                                                        alt="copy"
+                                                    />
+                                                    <div>Copy Password</div>
                                                 </div>
                                             </div>
-                                            <div className="cardLink">{ele.url}</div>
                                         </div>
-                                    )
-                                })}
-                            </div>
+                                        <div className="cardLink">{ele.url}</div>
+                                    </div>
+                                )
+                            })}
                         </div>
+
 
                     )
                     }
