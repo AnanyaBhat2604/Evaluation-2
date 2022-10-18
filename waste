@@ -42,3 +42,7 @@
           </div>
         </div>
       </div>
+
+
+      src={require('../../assets/Images/copy.png')}
+      src={require('../../assets/logo.png')}
