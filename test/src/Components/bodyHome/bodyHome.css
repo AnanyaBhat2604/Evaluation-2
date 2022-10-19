@@ -361,6 +361,9 @@
 @media screen and (max-width: 420px) {
     .cardContents {
         width: 270px;
-        
+    }
+    .socialMedia{
+        width: 200px;
+        margin-left: 0px;
     }
 }
