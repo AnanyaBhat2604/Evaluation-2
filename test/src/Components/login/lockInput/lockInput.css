@@ -89,3 +89,9 @@
     color: var(--color2);
     text-decoration: none;
 }
+
+@media only screen and (max-width: 845px) {
+    .lockContainer{
+        padding: 20px;
+    }
+}

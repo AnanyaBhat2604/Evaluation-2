@@ -30,8 +30,8 @@ const BodyHome = () => {
             icon: require("../../assets/Images/YouTube.png"),
         },
         {
-            siteName: 'Linkdin',
-            url: 'www.linkdin.com',
+            siteName: 'Linkedin',
+            url: 'www.linkedin.com',
             sector: 'Social Media',
             userName: 'ssmraok',
             sitePassword: 'abcd123',
@@ -65,7 +65,7 @@ const BodyHome = () => {
                 </div>
                 <div className="socialMedia">
                     <div className="socialMediaTitle">Social Media</div>
-                    <div className="socialMediaCount">07</div>
+                    <div className="socialMediaCount">{previousData.length}</div>
                     <div className="socialMediaDropDown">
                         <img src={require('../../assets/Images/Path Copy.png')} alt="add" />
                     </div>
@@ -115,8 +115,6 @@ const BodyHome = () => {
                                 )
                             })}
                         </div>
-
-
                     )
                     }
                 </div>
@@ -127,10 +125,44 @@ const BodyHome = () => {
                         <div className="modal">
                             <div className="overlay" onClick={showModal}></div>
                             <div className="modal-content">
-                                <h2>Hello Modal</h2>
-                                <p>
-                                    Modal
-                                </p>
+                                <form className="modalBodyForm" >
+                                    <div className="modalInput occupy">
+                                        <div>URL</div>
+                                        <input type="text" name="url" className="modalInputBar"/>
+                                    </div>
+                                    <div className="modalInput">
+                                        <div>Site Name</div>
+                                        <input type="text" name="siteName" className="modalInputBar" />
+                                    </div>
+                                    <div className="modalInput">
+                                        <div>Sector/Folder</div>
+                                        <div className="paswordEyeContainer">
+                                            <input type="text" name="sector" className="modalInputBar passwordEye" />
+                                            <img src={require('../../assets/Images/Path Copy.png')} alt="eye" />
+                                        </div>
+                                    </div>
+                                    <div className="modalInput">
+                                        <div>User Name</div>
+                                        <input type="text" name="userName" className="modalInputBar" value="userName" />
+                                    </div>
+                                    <div className="modalInput">
+                                        <div>Site Password</div>
+                                        <div className="paswordEyeContainer">
+                                            <input type="text" name="sitePassword" className="modalInputBar passwordEye" value="sitePassword" />
+                                            <img src={require('../../assets/Images/eye_on.png')} alt="eye" />
+                                        </div>
+                                    </div>
+                                    <div className="modalInput occupy">
+                                        <div>Notes</div>
+                                        <textarea className="modalInputBar" name="notes" />
+                                    </div>
+                                </form>
+                                <div className="modalButtons">
+                                    <button className="modalButton modalResetButton">Reset</button>
+                                    <button className="modalButton modalSaveButton" type="submit">
+                                        Save
+                                    </button>
+                                </div>
                                 <button className="close-modal" onClick={showModal} >
                                     CLOSE
                                 </button>

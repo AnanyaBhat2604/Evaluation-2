@@ -1,15 +1,59 @@
 import './lockInput.css'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Toast from "../../toast/toast"
 import { useState } from 'react'
 
 const LockInput = () => {
 
-    const [togglePass, setTogglePass] = useState(false)
+    const navigate = useNavigate();
+    const [togglePass, setTogglePass] = useState(false);
+
+    if (localStorage.getItem('users') === null) {
+        localStorage.setItem(
+            'user Data',
+            JSON.stringify(
+                localStorage.setItem(
+                    'users',
+                    JSON.stringify([
+                        { mobileNo: '9036825554', mPin: '9036' },
+                    ])
+                )
+            )
+        );
+    }
 
     const togglePassword = () => {
         setTogglePass(!togglePass)
     }
+
+    const loginHandler = (e: any) => {
+        e.preventDefault();
+        type usersType = { mobileNo: number; mPin: number };
+        console.log(e.target);
+
+
+        const mobileNo = e.target.mobileNo.value;
+        const mPin = e.target.mPin.value;
+
+        const userData = { mobileNo, mPin };
+        console.log('userData', userData);
+
+        const users: usersType[] = JSON.parse(
+            localStorage.getItem('users') || '[]'
+        );
+        console.log('users', users);
+
+        for (let i = 0; i < users.length; i++) {
+            if (userData.mobileNo === users[i].mobileNo) {
+                if (userData.mPin === users[i].mPin) {
+                    localStorage.setItem('auth', 'authenticated');
+                    navigate('/home');
+                    localStorage.setItem('currentUser', mobileNo);
+                    window.location.reload();
+                }
+            }
+        }
+    };
 
     return (
         <div className='lockContainer'>
@@ -18,10 +62,10 @@ const LockInput = () => {
                 <div className="signIn">
                     SIGN IN TO YOUR ACCOUNT
                 </div>
-                <form className="formContainer">
+                <form className="formContainer" onSubmit={loginHandler}>
                     <div className="mobile">
                         <label htmlFor="mobile">
-                            <input type="text" name="mobile" id="mobile" className="input" placeholder=" Mobile Number " />
+                            <input type="text" name="mobileNo" id="mobile" className="input" placeholder=" Mobile Number " />
                         </label>
                     </div>
                     <div className="mPin">

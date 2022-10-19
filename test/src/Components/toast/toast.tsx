@@ -1,11 +1,12 @@
-import './toast.css'
+import './toast.css';
 
-const Toast = () => {
+const Toast = (props: JSX.Element | any) => {
   return (
-    <div className = "success">
-        Congrats!!! Success, SignIn to access the value
+    <div className="snackBar">
+      <div className="snackBarMsg">{props.message}</div>
+      <div className="snackBarClose">x</div>
     </div>
-  )
-}
+  );
+};
 
 export default Toast
