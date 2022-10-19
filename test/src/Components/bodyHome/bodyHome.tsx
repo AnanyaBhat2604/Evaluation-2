@@ -125,6 +125,7 @@ const BodyHome = () => {
                         <div className="modal">
                             <div className="overlay" onClick={showModal}></div>
                             <div className="modal-content">
+                            <div className="modalTitle">Add Site</div>
                                 <form className="modalBodyForm" >
                                     <div className="modalInput occupy">
                                         <div>URL</div>
@@ -143,12 +144,12 @@ const BodyHome = () => {
                                     </div>
                                     <div className="modalInput">
                                         <div>User Name</div>
-                                        <input type="text" name="userName" className="modalInputBar" value="userName" />
+                                        <input type="text" name="userName" className="modalInputBar" />
                                     </div>
                                     <div className="modalInput">
                                         <div>Site Password</div>
                                         <div className="paswordEyeContainer">
-                                            <input type="text" name="sitePassword" className="modalInputBar passwordEye" value="sitePassword" />
+                                            <input type="text" name="sitePassword" className="modalInputBar passwordEye" />
                                             <img src={require('../../assets/Images/eye_on.png')} alt="eye" />
                                         </div>
                                     </div>
@@ -164,7 +165,7 @@ const BodyHome = () => {
                                     </button>
                                 </div>
                                 <button className="close-modal" onClick={showModal} >
-                                    CLOSE
+                                    X
                                 </button>
                             </div>
                         </div>

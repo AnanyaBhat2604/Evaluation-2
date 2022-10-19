@@ -31,6 +31,15 @@ body {
     padding-bottom: 30px;
 }
 
+.lockMinImage {
+    display: none;
+}
+
+
+.tabsContainer {
+    display: none;
+}
+
 .lockBoxText {
     color: var(--color2);
     font-size: 20px;
@@ -51,7 +60,12 @@ body {
     }
 
     .lockImage {
-        padding : 20px 30px 20px 30px;
+        display: none;
+    }
+
+    .lockMinImage {
+        display: block;
+        padding: 20px 30px 20px 30px;
     }
 
     .lockBoxText {
@@ -61,10 +75,28 @@ body {
         justify-content: center;
         display: none;
     }
+
+    .tabsContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .linkToSign {
+        text-decoration: none;
+        color: var(--color2);
+        font-family: "Open Sans";
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 27px;
+    }
 }
 
 .lockParent {
-    /* margin: 0 12%; */
     display: flex;
     align-items: center;
     justify-content: center;

@@ -29,8 +29,6 @@ const LockInput = () => {
     const loginHandler = (e: any) => {
         e.preventDefault();
         type usersType = { mobileNo: number; mPin: number };
-        console.log(e.target);
-
 
         const mobileNo = e.target.mobileNo.value;
         const mPin = e.target.mPin.value;
@@ -46,7 +44,6 @@ const LockInput = () => {
         for (let i = 0; i < users.length; i++) {
             if (userData.mobileNo === users[i].mobileNo) {
                 if (userData.mPin === users[i].mPin) {
-                    localStorage.setItem('auth', 'authenticated');
                     navigate('/home');
                     localStorage.setItem('currentUser', mobileNo);
                     window.location.reload();
@@ -57,7 +54,6 @@ const LockInput = () => {
 
     return (
         <div className='lockContainer'>
-
             <div className="form">
                 <div className="signIn">
                     SIGN IN TO YOUR ACCOUNT
@@ -83,7 +79,6 @@ const LockInput = () => {
                         </div>
                         <div className="reg">Don't have a Account? <Link to="/signUp" className="link">SIGN UP</Link></div>
                     </div>
-
                 </form>
             </div>
         </div>

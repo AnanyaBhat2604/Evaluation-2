@@ -7,3 +7,56 @@
 .bodyHome{
     width: 100%;
 }
+
+.mobileTopBar {
+    display: none;
+}
+
+@media screen and (max-width: 582px) {
+    .topBar {
+        display: none;
+    }
+    .mobileTopBar {
+        z-index: 1;
+        display: flex;
+        position: fixed;
+        padding: 0 18px;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #0e85ff;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+    }
+    .sideBar {
+        display: none;
+    }
+    .bodyHome {
+        height: calc(100vh - 2rem);
+    }
+    .headerSearch {
+        display: none;
+    }
+    .headerAddButton {
+        position: fixed;
+        bottom: 31px;
+        right: 33px;
+        z-index: 1;
+    }
+    .mobileTopBarFirst {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .mobileTopBarLast {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .bodyHome {
+        margin-top: 0px;
+        width: 100px;
+    }
+}

@@ -80,13 +80,30 @@
     padding-bottom: 7px;
 }
 
+.tabsContainer{
+    display: none;
+}
+
 @media only screen and (max-width: 845px) {
     .LockDisplay {
         min-height: 100vh;
     }
 
+    .signUp{
+        display: none;
+    }
+
     .form {
         padding: 0;
+    }
+
+    .lockImage {
+        display: none;
+    }
+
+    .lockMinImage{
+        display: block;
+        padding : 20px 30px 20px 30px;
     }
 
     .LockDisplay {
@@ -94,5 +111,24 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .tabsContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .linkToSign {
+        text-decoration: none;
+        color: var(--color2);
+        font-family: "Open Sans";
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 27px;
     }
 }

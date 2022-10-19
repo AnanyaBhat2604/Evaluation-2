@@ -6,6 +6,7 @@
     left: 0;
     height: 8rem;
     background-color: var(--topBar);
+    z-index: 2;
 }
 
 .topBarContents {

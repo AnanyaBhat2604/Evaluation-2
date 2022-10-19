@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import '../../Components/login/lockInput/lockInput.css';
 import SignUp from "../../Components/signUp/signUp"
 import HomePage from "../homePage/homePage";
+import {useState, useEffect} from 'react';
 
 const LandingPage = () => {
     return (

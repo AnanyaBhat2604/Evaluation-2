@@ -1,4 +1,4 @@
-.snackBar {
+.toastBar {
     position: absolute;
     top: 3.5em;
     background-color: var(--successGreen);
@@ -11,7 +11,7 @@
     padding: 12px 23px;
   }
   
-  .snackBarMsg {
+  .toastMsg {
     color: var(--successGreenFont);
     font-size: 14px;
     letter-spacing: 0;
@@ -19,7 +19,7 @@
     font-weight: bold;
   }
   
-  .snackBarClose {
+  .toastClose {
     color: var(--successGreenFont);
     font-size: 24px;
     letter-spacing: 0;

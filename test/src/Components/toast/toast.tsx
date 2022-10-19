@@ -1,10 +1,10 @@
 import './toast.css';
 
-const Toast = (props: JSX.Element | any) => {
+const Toast = () => {
   return (
-    <div className="snackBar">
-      <div className="snackBarMsg">{props.message}</div>
-      <div className="snackBarClose">x</div>
+    <div className="toastBar">
+      <div className="toastMsg">Congrats!!! Success, Signin to access the value</div>
+      <div className="toastClose">x</div>
     </div>
   );
 };

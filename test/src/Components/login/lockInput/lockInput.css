@@ -94,4 +94,9 @@
     .lockContainer{
         padding: 20px;
     }
+
+    .signIn{
+        display: none;
+    }
+    
 }

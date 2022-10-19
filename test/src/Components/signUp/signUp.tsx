@@ -2,7 +2,7 @@ import './signUp.css'
 import { useState } from 'react'
 import "../login/lock/lock.css"
 import "../signUp/signUp.css"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const SignUp = () => {
 
@@ -78,7 +78,21 @@ const SignUp = () => {
             <div className="LockDisplay ">
                 <div className='lockBox'>
                     <div className="lockImage"><img src={require("../../assets/logo.png")} /></div>
+                    <div className="lockMinImage"><img src={require("../../assets/Images/logo.png")} /></div>
                     <h4 className='lockBoxText'>Protect & Manage every password in your business</h4>
+
+                    <div className="tabsContainer">
+                        <div className="signInTab">
+                            <Link to="/signin" className="linkToSign">
+                                Sign-IN
+                            </Link>
+                        </div>
+                        <div className="signUpTab">
+                            <Link to="/signup" className="linkToSign">
+                                Sign-UP
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <div className='lockContainer'>
                     <div className="form">
@@ -97,8 +111,7 @@ const SignUp = () => {
                             </div>
 
                             <div className="mPin">
-
-                                <input type="password" name="confirmMPin" id="mPin" className="input" placeholder="Re-Enter 4 Digit MPin" />
+                                <input type={togglePass ? 'text' : 'password'} name="confirmMPin" id="mPin" className="input" placeholder="Re-Enter 4 Digit MPin" />
                                 <img src={require("../../assets/eye_on.png")} alt="eye" className='toggleEye' onClick={togglePassword} />
                             </div>
                             <div className='bottomDisplay'>
@@ -106,7 +119,6 @@ const SignUp = () => {
                                     <input type="submit" value="SIGN UP" className='signInText' />
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

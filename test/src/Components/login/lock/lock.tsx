@@ -12,20 +12,27 @@ const Lock = () => {
 
   return (
     <div className="lockParent">
-    <div className="LockDisplay">
-      <div className='lockBox'>
-        <div className="lockImage"><img src={require("../../../assets/logo.png")} /></div>
-        <h4 className='lockBoxText'>Protect & Manage every password in your business</h4>
+      <div className="LockDisplay">
+        <div className='lockBox'>
+          <div className="lockImage"><img src={require("../../../assets/logo.png")} /></div>
+          <div className="lockMinImage"><img src={require("../../../assets/Images/logo.png")} /></div>
+          <h4 className='lockBoxText'>Protect & Manage every password in your business</h4>
+          <div className="tabsContainer">
+            <div className="signInTab">
+              <Link to="/signin" className="linkToSign">
+                Sign-IN
+              </Link>
+            </div>
+            <div className="signUpTab">
+              <Link to="/signup" className="linkToSign">
+                Sign-UP
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <LockInput />
       </div>
-
-      {/* <Routes>
-        <Route path="/" element={<LockInput />} />
-        <Route path="/signUp" element={<SignUp />} />
-      </Routes> */}
-
-      <LockInput />
-
-    </div>
     </div>
   )
 }
